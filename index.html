@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio — IT Graduate | ERP Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">AF<span>.</span></div>
+    <div class="navlinks">
+      <a href="index.html" class="active">Home</a>
+      <a href="experience-skills.html">Experience & Skills</a>
+      <a href="education.html">Education</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <a href="contact.html" class="navcta">Contact me</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="active">Home</a>
+    <a href="experience-skills.html">Experience & Skills</a>
+    <a href="education.html">Education</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+  </div>
+</nav>
+
+<div class="main-content page-transition">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="mono eyebrow">IT Graduate — ERP Specialist</span>
+      <h1>Abraham<br>Fagcayang</h1>
+      <p class="lead">Fresh Information Technology graduate specializing in Enterprise Resource Planning. I help organizations keep operations efficient — through clean documentation, dependable coordination, and a working understanding of the systems that run behind the scenes.</p>
+      <div class="hero-ctas">
+        <a href="experience-skills.html" class="btn-primary">View my experience →</a>
+        <a href="contact.html" class="btn-outline">Get in touch</a>
+      </div>
+    </div>
+    <div class="photo-wrap">
+      <div class="float-chip fc1"><b>ERP</b><br>Fundamentals</div>
+      <div class="float-chip fc2"><b>Records</b><br>Documentation</div>
+      <div class="float-chip fc3"><b>Events</b><br>Coordination</div>
+      <div class="float-chip fc4"><b>Team</b><br>Player</div>
+      <div class="photo-frame" id="photoFrame">
+        <img src="assets/profile-picture.png" alt="Abraham Fagcayang" class="hero-photo">
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<script>
+// Mobile menu toggle
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+
+// Photo tilt effect
+const photoFrame = document.getElementById('photoFrame');
+if (photoFrame) {
+  photoFrame.addEventListener('mousemove', function(e) {
+    const rect = photoFrame.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const rotateX = (y - centerY) / 20;
+    const rotateY = (centerX - x) / 20;
+    photoFrame.style.transform = `rotate(-4deg) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+  
+  photoFrame.addEventListener('mouseleave', function() {
+    photoFrame.style.transform = 'rotate(-4deg)';
+  });
+}
+</script>
+<script src="particles.js"></script>
+
+
+</body>
+</html>

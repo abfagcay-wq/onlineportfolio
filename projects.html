@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Portfolio | IT Graduate | ERP Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">AF<span>.</span></div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="experience-skills.html">Experience & Skills</a>
+      <a href="education.html">Education</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="projects.html" class="active">Projects</a>
+    </div>
+    <a href="contact.html" class="navcta">Contact me</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="experience-skills.html">Experience & Skills</a>
+    <a href="education.html">Education</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html" class="active">Projects</a>
+  </div>
+</nav>
+
+<div class="main-content page-transition">
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono section-tag">06 / Projects</span>
+      <h2>Projects &amp; Portfolio</h2>
+    </div>
+
+    <div class="proj-grid">
+      <div class="proj-card" data-project="1">
+        <div class="proj-image-placeholder">
+          <div class="proj-gradient"></div>
+          <div class="proj-pattern"></div>
+          <div class="proj-glow"></div>
+          <div class="proj-overlay">
+            <span class="proj-label">Project Preview</span>
+          </div>
+        </div>
+        <div class="proj-content">
+          <h3>Add project title</h3>
+          <p>Short description of the tools, goal, and outcome.</p>
+        </div>
+      </div>
+      <div class="proj-card" data-project="2">
+        <div class="proj-image-placeholder">
+          <div class="proj-gradient"></div>
+          <div class="proj-pattern"></div>
+          <div class="proj-glow"></div>
+          <div class="proj-overlay">
+            <span class="proj-label">Project Preview</span>
+          </div>
+        </div>
+        <div class="proj-content">
+          <h3>Add project title</h3>
+          <p>Short description of the tools, goal, and outcome.</p>
+        </div>
+      </div>
+      <div class="proj-card" data-project="3">
+        <div class="proj-image-placeholder">
+          <div class="proj-gradient"></div>
+          <div class="proj-pattern"></div>
+          <div class="proj-glow"></div>
+          <div class="proj-overlay">
+            <span class="proj-label">Project Preview</span>
+          </div>
+        </div>
+        <div class="proj-content">
+          <h3>Add project title</h3>
+          <p>Short description of the tools, goal, and outcome.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top: 60px;">
+      <span class="mono section-tag">07 / Case Studies</span>
+      <h2>Featured Work</h2>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-body">
+        <h3>Documentation System Implementation</h3>
+        <p>Developed and implemented a structured documentation system for office records, improving file retrieval efficiency and organization during internship at DENR.</p>
+        <div class="tag-row">
+          <span class="tag">Documentation</span>
+          <span class="tag">Organization</span>
+          <span class="tag">Efficiency</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-body">
+        <h3>Event Coordination Workflow</h3>
+        <p>Created streamlined workflows for event planning and execution, ensuring smooth coordination between departments and successful delivery of staff activities.</p>
+        <div class="tag-row">
+          <span class="tag">Event Planning</span>
+          <span class="tag">Coordination</span>
+          <span class="tag">Workflow</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- Navigation Buttons - Previous Only for Projects Page (Last in flow) -->
+<div class="nav-buttons-container">
+  <a href="achievements.html" class="nav-btn prev-btn">
+    <span class="arrow">←</span>
+    Achievements
+  </a>
+  <div></div>
+</div>
+
+<script>
+// Mobile menu toggle
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+
+// Project card click interaction
+document.querySelectorAll('.proj-card').forEach(card => {
+  card.addEventListener('click', function() {
+    // Remove active class from all cards
+    document.querySelectorAll('.proj-card').forEach(c => c.classList.remove('active'));
+    // Add active class to clicked card
+    this.classList.add('active');
+  });
+});
+</script>
+<script src="particles.js"></script>
+
+</body>
+</html>

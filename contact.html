@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Portfolio | IT Graduate | ERP Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">AF<span>.</span></div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="experience-skills.html">Experience & Skills</a>
+      <a href="education.html">Education</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <a href="contact.html" class="navcta">Contact me</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="experience-skills.html">Experience & Skills</a>
+    <a href="education.html">Education</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+  </div>
+</nav>
+
+<div class="main-content page-transition">
+<section id="contact" style="background:var(--bg-alt);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono section-tag">10 / Contact</span>
+      <h2>Let's work together</h2>
+    </div>
+    <div class="contact-grid">
+      <ul class="contact-list">
+        <li>
+          <div class="ico">@</div>
+          <div><div class="lbl">Email</div><div class="val">yourname@email.com</div></div>
+        </li>
+        <li>
+          <div class="ico">in</div>
+          <div><div class="lbl">LinkedIn</div><div class="val">linkedin.com/in/yourname</div></div>
+        </li>
+        <li>
+          <div class="ico">#</div>
+          <div><div class="lbl">Phone (optional)</div><div class="val">+63 9XX XXX XXXX</div></div>
+        </li>
+      </ul>
+      <form onsubmit="event.preventDefault(); alert('Message ready — connect this form to your email service to receive it.');">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Your email" required>
+        <textarea placeholder="Your message" required></textarea>
+        <button type="submit" class="send-btn">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- Navigation Buttons - Previous Only for Contact Page -->
+<div class="nav-buttons-container">
+  <a href="index.html" class="nav-btn prev-btn">
+    <span class="arrow">←</span>
+    Home
+  </a>
+  <div></div>
+</div>
+
+<script>
+// Mobile menu toggle
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+<script src="particles.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Education — Portfolio | IT Graduate | ERP Specialist</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<canvas id="particle-canvas"></canvas>
+
+<nav>
+  <div class="wrap">
+    <div class="logo">AF<span>.</span></div>
+    <div class="navlinks">
+      <a href="index.html">Home</a>
+      <a href="experience-skills.html">Experience & Skills</a>
+      <a href="education.html" class="active">Education</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="projects.html">Projects</a>
+    </div>
+    <a href="contact.html" class="navcta">Contact me</a>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Home</a>
+    <a href="experience-skills.html">Experience & Skills</a>
+    <a href="education.html" class="active">Education</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="projects.html">Projects</a>
+  </div>
+</nav>
+
+<div class="main-content page-transition">
+<section style="background:var(--bg-alt);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="mono section-tag">05 / Education</span>
+      <h2>Educational Background</h2>
+    </div>
+
+    <div class="exp-card">
+      <div class="exp-meta">
+        <span class="mono">Bachelor's Degree</span>
+        <div class="org">Bachelor of Science in Information Technology</div>
+        <div class="place">University Name</div>
+      </div>
+      <div class="exp-body">
+        <h3>IT Graduate with ERP Specialization</h3>
+        <p>Completed comprehensive coursework in information technology with focus on Enterprise Resource Planning systems, database management, and business process optimization.</p>
+        <div class="tag-row">
+          <span class="tag">ERP Systems</span>
+          <span class="tag">Database Management</span>
+          <span class="tag">Business Processes</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top: 80px;">
+      <span class="mono section-tag">06 / Relevant Coursework</span>
+      <h2>Key Academic Focus Areas</h2>
+    </div>
+
+    <div class="about-grid">
+      <div>
+        <h3>Core Subjects</h3>
+        <ul class="skill-list">
+          <li>Enterprise Resource Planning (ERP) Systems</li>
+          <li>Database Management Systems</li>
+          <li>Business Process Management</li>
+          <li>Systems Analysis and Design</li>
+          <li>Information Systems Management</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Technical Foundation</h3>
+        <ul class="skill-list">
+          <li>Programming Fundamentals</li>
+          <li>Web Development Technologies</li>
+          <li>Network and Security Basics</li>
+          <li>Data Structures and Algorithms</li>
+          <li>Software Engineering Principles</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section-head" style="margin-top: 80px;">
+      <span class="mono section-tag">07 / Academic Achievements</span>
+      <h2>Recognition & Performance</h2>
+    </div>
+
+    <div class="proof-strip">
+      <div class="proof-badge">★</div>
+      <div>
+        <h3>Academic Excellence</h3>
+        <p>Maintained strong academic performance throughout the program, with particular distinction in ERP-related coursework and practical implementations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- Navigation Buttons - Previous and Next for Middle Pages -->
+<div class="nav-buttons-container">
+  <a href="experience-skills.html" class="nav-btn prev-btn">
+    <span class="arrow">←</span>
+    Experience & Skills
+  </a>
+  <a href="achievements.html" class="nav-btn">
+    Achievements
+    <span class="arrow">→</span>
+  </a>
+</div>
+
+<script>
+// Mobile menu toggle
+document.getElementById('hamburgerBtn').addEventListener('click', function() {
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+</script>
+<script src="particles.js"></script>
+
+</body>
+</html>
