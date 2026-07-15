@@ -34,36 +34,7 @@ body{
   pointer-events:none;
   z-index:0;
 }
-body::before{
-  content:"";
-  position:fixed;
-  top:0; left:0; right:0; bottom:0;
-  pointer-events:none;
-  z-index:9999;
-  border:3px solid transparent;
-  border-image: linear-gradient(45deg, var(--teal), var(--blue), #a855f7, var(--teal)) 1;
-  animation:neonBorder 8s linear infinite;
-  opacity:0.6;
-}
-body::after{
-  content:"";
-  position:fixed;
-  top:0; left:0; right:0; bottom:0;
-  pointer-events:none;
-  z-index:9998;
-  border:6px solid transparent;
-  border-image: linear-gradient(45deg, var(--teal), var(--blue), #a855f7, var(--teal)) 1;
-  animation:neonBorder 8s linear infinite reverse;
-  filter:blur(8px);
-  opacity:0.3;
-}
-@keyframes neonBorder{
-  0%{ border-image: linear-gradient(0deg, var(--teal), var(--blue), #a855f7, var(--teal)) 1; }
-  25%{ border-image: linear-gradient(90deg, var(--teal), var(--blue), #a855f7, var(--teal)) 1; }
-  50%{ border-image: linear-gradient(180deg, var(--teal), var(--blue), #a855f7, var(--teal)) 1; }
-  75%{ border-image: linear-gradient(270deg, var(--teal), var(--blue), #a855f7, var(--teal)) 1; }
-  100%{ border-image: linear-gradient(360deg, var(--teal), var(--blue), #a855f7, var(--teal)) 1; }
-}
+
 h1,h2,h3{font-family:'Space Grotesk', sans-serif; font-weight:700; letter-spacing:-0.01em;}
 .mono{font-family:'IBM Plex Mono', monospace; letter-spacing:0.06em; text-transform:uppercase; font-size:12px;}
 a{color:inherit; text-decoration:none;}
